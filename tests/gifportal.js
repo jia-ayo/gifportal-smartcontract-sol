@@ -3,7 +3,8 @@ const anchor = require("@project-serum/anchor");
 
 const main = async() => {
  console.log("starting test .....");
- anchor.setProvider(anchor.AnchorProvider.env());
+ const provider = anchor.AnchorProvider.env();
+ anchor.setProvider(provider);
  const program = anchor.workspace.Gifportal;
  const tx= await program.rpc.startStuffOff();
  console.log("your transaction signatur", tx)
