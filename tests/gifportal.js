@@ -26,14 +26,16 @@ const main = async() => {
  );
  console.log("Gif Count", account.totalGifs.toString());
 
- await program.rpc.addGif({
+ await program.rpc.addGif("https://giphy.com/clips/buzzfeed-christmas-xmas-men-try-sexy-santa-lingerie-bkinIEj8w3S0rWWc16", {
     accounts: {
         baseAccount: baseAccount.publicKey,
+        user: provider.wallet.publicKey
     }
  })
 
  account = await program.account.baseAccount.fetch(baseAccount.publicKey);
  console.log("Gif Count", account.totalGifs.toString());
+ console.log("Gif List", account.gifList);
 
 }
 
