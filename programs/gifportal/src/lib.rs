@@ -2,7 +2,7 @@ use anchor_lang::{prelude::Program, system_program::System};
 use anchor_lang::prelude::*;
 use anchor_lang::solana_program::entrypoint::ProgramResult;
 
-declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+declare_id!("HJSuWzbdcgqKZorB8MU3GdyUZa1bjbtwUx5mYPsGJXNY");
 
 #[program]
 pub mod gifportal {
